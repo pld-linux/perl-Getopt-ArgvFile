@@ -24,7 +24,7 @@ Getopt::ArgvFile s³u¿y do interpolacji opcji skryptu z pliku do @ARGV.
 %setup -q -n %{pdir}-%{pnam}-%{version}
 
 %build
-perl Makefile.PL
+%{__perl} Makefile.PL
 %{__make}
 
 %install
