@@ -1,8 +1,8 @@
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	Getopt
 %define	pnam	ArgvFile
-Summary:	Getopt::ArgvFile perl module
-Summary(pl):	Modu³ perla Getopt::ArgvFile
+Summary:	Getopt::ArgvFile - interpolates script options from files into @ARGV
+Summary(pl):	Getopt::ArgvFile - interpolacja opcji skryptu z pliku do @ARGV
 Name:		perl-Getopt-ArgvFile
 Version:	1.01
 Release:	9
@@ -16,10 +16,16 @@ BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Getopt::ArgvFile interpolates script options from files into @ARGV.
+The Getopt::ArgvFile Perl module simply interpolates option file hints
+in @ARGV by the contents of the pointed files. This enables option
+reading from files instead of or additional to the usual reading from
+the command line.
 
 %description -l pl
-Getopt::ArgvFile s³u¿y do interpolacji opcji skryptu z pliku do @ARGV.
+Modu³ Perla Getopt::ArgvFile s³u¿y do interpolacji opcji skryptu z
+pliku do @ARGV poprzez zawarto¶æ wskazywanych plików. W³±cza to odczyt
+opcji z pliku zamiast lub oprócz zwyk³ego ich odczytu z linii
+polecenia.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
