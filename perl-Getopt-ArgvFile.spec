@@ -3,8 +3,8 @@
 %bcond_without	tests	# do not perform "make test"
 #
 %include	/usr/lib/rpm/macros.perl
-%define	pdir	Getopt
-%define	pnam	ArgvFile
+%define		pdir	Getopt
+%define		pnam	ArgvFile
 Summary:	Getopt::ArgvFile - interpolates script options from files into @ARGV
 Summary(pl):	Getopt::ArgvFile - interpolacja opcji skryptu z pliku do @ARGV
 Name:		perl-Getopt-ArgvFile
