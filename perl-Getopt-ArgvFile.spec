@@ -25,7 +25,7 @@ Getopt-ArgvFile s³u¿y do interpolacji opcji skryptu z pliku do @ARGV.
 
 %build
 perl Makefile.PL
-make
+%{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
