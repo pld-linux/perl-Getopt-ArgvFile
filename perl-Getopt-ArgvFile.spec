@@ -1,0 +1,54 @@
+%define		perl_sitelib	%(eval "`perl -V:installsitelib`"; echo $installsitelib)
+Summary:	Getopt-ArgvFile perl module
+Summary(pl):	Modu³ perla Getopt-ArgvFile
+Name:		perl-Getopt-ArgvFile
+Version:	1.01
+Release:	3
+Copyright:	GPL
+Group:		Development/Languages/Perl
+Group(pl):	Programowanie/Jêzyki/Perl
+Source:		ftp://ftp.perl.org/pub/CPAN/modules/by-module/Getopt/Getopt-ArgvFile-%{version}.tar.gz
+BuildRequires:	perl >= 5.005_03-10
+BuildRequires:	perl-Text-ParseWords
+%requires_eq	perl
+Requires:	%{perl_sitearch}
+Requires:	perl-Text-ParseWords
+BuildRoot:	/tmp/%{name}-%{version}-root
+
+%description
+Getopt-ArgvFile interpolates script options from files into @ARGV.
+
+%description -l pl
+Getopt-ArgvFile s³u¿y do interpolacji opcji skryptu z pliku do @ARGV.
+
+%prep
+%setup -q -n Getopt-ArgvFile-%{version}
+
+%build
+perl Makefile.PL
+make
+
+%install
+rm -rf $RPM_BUILD_ROOT
+make install DESTDIR=$RPM_BUILD_ROOT
+
+(
+  cd $RPM_BUILD_ROOT%{perl_sitearch}/auto/Getopt/ArgvFile
+  sed -e "s#$RPM_BUILD_ROOT##" .packlist >.packlist.new
+  mv .packlist.new .packlist
+)
+
+gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man3/* \
+        README
+
+%clean
+rm -rf $RPM_BUILD_ROOT
+
+%files
+%defattr(644,root,root,755)
+%doc README.gz
+
+%{perl_sitelib}/Getopt/ArgvFile.pm
+%{perl_sitearch}/auto/Getopt/ArgvFile
+
+%{_mandir}/man3/*
