@@ -1,12 +1,11 @@
+%include	/usr/lib/rpm/macros.perl
 %define	pdir	Getopt
 %define	pnam	ArgvFile
-%include	/usr/lib/rpm/macros.perl
 Summary:	Getopt-ArgvFile perl module
 Summary(pl):	Modu³ perla Getopt-ArgvFile
 Name:		perl-Getopt-ArgvFile
 Version:	1.01
-Release:	7
-
+Release:	8
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
@@ -22,7 +21,7 @@ Getopt-ArgvFile interpolates script options from files into @ARGV.
 Getopt-ArgvFile s³u¿y do interpolacji opcji skryptu z pliku do @ARGV.
 
 %prep
-%setup -q -n Getopt-ArgvFile-%{version}
+%setup -q -n %{pdir}-%{pnam}-%{version}
 
 %build
 perl Makefile.PL
