@@ -6,7 +6,7 @@
 %define		pdir	Getopt
 %define		pnam	ArgvFile
 Summary:	Getopt::ArgvFile - interpolates script options from files into @ARGV
-Summary(pl):	Getopt::ArgvFile - interpolacja opcji skryptu z pliku do @ARGV
+Summary(pl.UTF-8):   Getopt::ArgvFile - interpolacja opcji skryptu z pliku do @ARGV
 Name:		perl-Getopt-ArgvFile
 Version:	1.10
 Release:	1
@@ -25,10 +25,10 @@ in @ARGV by the contents of the pointed files. This enables option
 reading from files instead of or additional to the usual reading from
 the command line.
 
-%description -l pl
-Modu≥ Perla Getopt::ArgvFile s≥uøy do interpolacji opcji skryptu z
-pliku do @ARGV poprzez zawarto∂Ê wskazywanych plikÛw. W≥±cza to odczyt
-opcji z pliku zamiast lub oprÛcz zwyk≥ego ich odczytu z linii
+%description -l pl.UTF-8
+Modu≈Ç Perla Getopt::ArgvFile s≈Çu≈ºy do interpolacji opcji skryptu z
+pliku do @ARGV poprzez zawarto≈õƒá wskazywanych plik√≥w. W≈ÇƒÖcza to odczyt
+opcji z pliku zamiast lub opr√≥cz zwyk≈Çego ich odczytu z linii
 polecenia.
 
 %prep
