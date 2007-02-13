@@ -6,7 +6,7 @@
 %define		pdir	Getopt
 %define		pnam	ArgvFile
 Summary:	Getopt::ArgvFile - interpolates script options from files into @ARGV
-Summary(pl.UTF-8):   Getopt::ArgvFile - interpolacja opcji skryptu z pliku do @ARGV
+Summary(pl.UTF-8):	Getopt::ArgvFile - interpolacja opcji skryptu z pliku do @ARGV
 Name:		perl-Getopt-ArgvFile
 Version:	1.10
 Release:	1
