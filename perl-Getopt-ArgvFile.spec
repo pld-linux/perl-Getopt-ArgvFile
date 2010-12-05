@@ -8,12 +8,13 @@
 Summary:	Getopt::ArgvFile - interpolates script options from files into @ARGV
 Summary(pl.UTF-8):	Getopt::ArgvFile - interpolacja opcji skryptu z pliku do @ARGV
 Name:		perl-Getopt-ArgvFile
-Version:	1.10
-Release:	2
+Version:	1.11
+Release:	1
 License:	Artistic
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tgz
-# Source0-md5:	9f8049318f85f8101bade10230f9a182
+Source0:	http://www.cpan.org/modules/by-module/Getopt/%{pdir}-%{pnam}-%{version}.tar.gz
+# Source0-md5:	42117db2af4a24c062b2da25d4fdf756
+URL:		http://search.cpan.org/dist/Getopt-ArgvFile/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildArch:	noarch
@@ -54,4 +55,4 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc README
 %{perl_vendorlib}/Getopt/ArgvFile.pm
-%{_mandir}/man3/*
+%{_mandir}/man3/Getopt::ArgvFile.3pm*
